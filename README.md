@@ -28,7 +28,7 @@ Add the dependency to your module's `build.gradle.kts`:
 
 ```kotlin
 dependencies {
-    implementation("me.jaypatelbond:countrypicker:1.0.0")
+    implementation("com.github.Jaypatelbond:CountryPicker:v1.0.0")
 }
 ```
 
@@ -36,7 +36,7 @@ dependencies {
 
 ```groovy
 dependencies {
-    implementation 'me.jaypatelbond:countrypicker:1.0.0'
+    implementation 'com.github.Jaypatelbond:CountryPicker:v1.0.0'
 }
 ```
 
