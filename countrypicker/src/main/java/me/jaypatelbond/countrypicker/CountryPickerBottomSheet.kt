@@ -44,6 +44,7 @@ import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -178,15 +179,17 @@ fun CountryPickerBottomSheet(
     val allCountries = remember { customCountryList ?: CountryDataProvider.getAllCountries() }
     var searchQuery by remember { mutableStateOf("") }
 
-    val filteredCountries = remember(searchQuery, allCountries) {
-        if (searchQuery.isBlank()) {
-            allCountries
-        } else {
-            val query = searchQuery.lowercase(Locale.ROOT)
-            allCountries.filter {
-                it.name.lowercase(Locale.ROOT).contains(query) ||
-                        it.code.lowercase(Locale.ROOT).contains(query) ||
-                        it.dialCode.contains(query)
+    val filteredCountries by remember(allCountries) {
+        derivedStateOf {
+            if (searchQuery.isBlank()) {
+                allCountries
+            } else {
+                val query = searchQuery.lowercase(Locale.ROOT)
+                allCountries.filter {
+                    it.name.lowercase(Locale.ROOT).contains(query) ||
+                            it.code.lowercase(Locale.ROOT).contains(query) ||
+                            it.dialCode.contains(query)
+                }
             }
         }
     }

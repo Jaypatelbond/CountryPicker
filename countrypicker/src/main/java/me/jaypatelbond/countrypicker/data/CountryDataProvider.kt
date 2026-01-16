@@ -5,8 +5,8 @@ import me.jaypatelbond.countrypicker.model.Country
 
 object CountryDataProvider {
     
-    fun getAllCountries(): List<Country> {
-        return listOf(
+    private val countryList by lazy {
+        listOf(
             Country("United States", "US", "+1"),
             Country("Canada", "CA", "+1"),
             Country("United Kingdom", "GB", "+44"),
@@ -59,4 +59,6 @@ object CountryDataProvider {
             Country("Ireland", "IE", "+353")
         ).sortedBy { it.name }
     }
+
+    fun getAllCountries(): List<Country> = countryList
 }
