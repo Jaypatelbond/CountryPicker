@@ -77,7 +77,7 @@ class CountryPickerBottomSheetFragment : BottomSheetDialogFragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setStyle(STYLE_NORMAL, R.style.BottomSheetDialogTheme)
+        setStyle(STYLE_NORMAL, me.jaypatelbond.countrypicker.view.R.style.BottomSheetDialogTheme)
     }
 
     override fun onStart() {
@@ -107,16 +107,16 @@ class CountryPickerBottomSheetFragment : BottomSheetDialogFragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        return inflater.inflate(R.layout.fragment_country_picker, container, false)
+        return inflater.inflate(me.jaypatelbond.countrypicker.view.R.layout.fragment_country_picker, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         // Initialize views
-        titleTextView = view.findViewById(R.id.titleTextView)
-        searchEditText = view.findViewById(R.id.searchEditText)
-        recyclerView = view.findViewById(R.id.recyclerView)
+        titleTextView = view.findViewById(me.jaypatelbond.countrypicker.view.R.id.titleTextView)
+        searchEditText = view.findViewById(me.jaypatelbond.countrypicker.view.R.id.searchEditText)
+        recyclerView = view.findViewById(me.jaypatelbond.countrypicker.view.R.id.recyclerView)
 
         // Setup countries list - use custom list if provided, otherwise use all countries
         allCountries = customCountryList ?: getAllCountries()

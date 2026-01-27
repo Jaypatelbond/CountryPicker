@@ -28,7 +28,14 @@ Add to your module's `build.gradle.kts`:
 
 ```kotlin
 dependencies {
-    implementation("com.github.Jaypatelbond:CountryPicker:v1.0.0")
+    // For Jetpack Compose
+    implementation("com.github.Jaypatelbond.CountryPicker:compose:v1.1.0")
+
+    // For Views / Fragments
+    implementation("com.github.Jaypatelbond.CountryPicker:view:v1.1.0")
+    
+    // Core (Data only)
+    implementation("com.github.Jaypatelbond.CountryPicker:core:v1.1.0")
 }
 ```
 
