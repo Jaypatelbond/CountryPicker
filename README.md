@@ -4,6 +4,7 @@
 [![API](https://img.shields.io/badge/API-24%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=24)
 [![Kotlin](https://img.shields.io/badge/Kotlin-1.9.0-blue.svg)](https://kotlinlang.org)
 [![Compose](https://img.shields.io/badge/Compose-1.5.0-blue.svg)](https://developer.android.com/jetpack/compose)
+[![](https://jitpack.io/v/Jaypatelbond/CountryPicker.svg)](https://jitpack.io/#Jaypatelbond/CountryPicker)
 
 A beautiful, fully customizable country picker component for Android with Jetpack Compose support.
 
