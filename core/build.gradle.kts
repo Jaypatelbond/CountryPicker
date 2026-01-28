@@ -40,7 +40,7 @@ afterEvaluate {
                 from(components["release"])
                 groupId = "com.github.Jaypatelbond.CountryPicker"
                 artifactId = "core"
-                version = "v1.1.0"
+                version = "v1.1.2"
             }
         }
     }
